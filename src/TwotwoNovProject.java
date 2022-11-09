@@ -17,17 +17,15 @@ public class TwotwoNovProject {
             stack2.push(stack1.pop());
             for(int j=0; j<len-i-1; j++)
             {
-                while(!stack1.isEmpty())
-                    if(stack1.peek()>stack2.peek())
-                    {
+                while(!stack1.isEmpty()) {
+                    if (stack1.peek() > stack2.peek()) {
                         stack2.push(stack1.pop());
-                    }
-                    else
-                    {
+                    } else {
                         int temp = stack2.pop();
                         stack2.push(stack1.pop());
                         stack2.push(temp);
                     }
+                }
             }
 
             while(!stack2.isEmpty())
@@ -40,6 +38,7 @@ public class TwotwoNovProject {
         while(!stack1.isEmpty())
         {
             nums[n]=stack1.pop();
+            n++;
         }
     }
 
